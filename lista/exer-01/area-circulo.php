@@ -1,12 +1,22 @@
 
 <?php
 
-$raio = $_GET["raio"];
+// if (!isset($_GET["raio"])) {
+//     $raio = 0;
+// } else if (isset($_GET["raio"])) {
+//     $raio = $_GET["raio"];
+// }
+
+if (!isset($_GET["raio"])) {
+    $raio = 0;
+} else {
+    $raio = $_GET["raio"];
+}
+
+
 $pi = 3.141592;
-$area = $pi * ($raio * $raio);
+$areac = $pi * ($raio * $raio);
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +26,14 @@ $area = $pi * ($raio * $raio);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> 
     <form method="GET" action="">
         <p>Informe o raio do círculo:</p>
         <input type="number" name="raio" id="raio" autocomplete="off">
         <input type="submit" value="Calcular">
-        <p><?php echo $area; ?></p>
+        <p><?php echo $areac; ?></p>
     </form>
-
+    <br>
+    <a href="index.html">Voltar</a>
 </body>
 </html>
