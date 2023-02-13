@@ -1,15 +1,9 @@
 
 <?php
+
+$raio = $_GET["raio"];
 $pi = 3.141592;
-
-$raio = $_POST['raio'];
-$area;
-
-$area = 4 * $pi * ($raio * $raio);
-
-
-
-
+$area = $pi * ($raio * $raio);
 ?>
 
 
@@ -23,7 +17,12 @@ $area = 4 * $pi * ($raio * $raio);
     <title>Document</title>
 </head>
 <body>
-    <p>Informe o raio do círculo:</p><br>
-    <input type="number" value="raio" name="raio" id="raio">
+    <form method="GET" action="">
+        <p>Informe o raio do círculo:</p>
+        <input type="number" name="raio" id="raio" autocomplete="off">
+        <input type="submit" value="Calcular">
+        <p><?php echo $area; ?></p>
+    </form>
+
 </body>
 </html>
