@@ -1,15 +1,19 @@
 
 <?php
 
-if (!isset($_GET["raio"])) {
-    $raio = 0;
+if (!isset($_GET["altura"])) {
+    $h = 0;
 } else {
-    $raio = $_GET["raio"];
+    $h = $_GET["altura"];
 }
 
+if (!isset($_GET["base"])) {
+    $b = 0;
+} else {
+    $b = $_GET["base"];
+}
 
-$pi = 3.141592;
-$areac = $pi * ($raio * $raio);
+$areat = $b * $h / 2;
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +27,11 @@ $areac = $pi * ($raio * $raio);
 <body>
     <form method="GET" action="">
         <p>Informe a altura do triângulo:</p>
-        <input type="number" name="raio" id="raio" autocomplete="off"><br>
+        <input type="number" name="altura" id="altura" autocomplete="off"><br>
         <p>Informe a base do triângulo:</p>
-        <input type="number" name="raio" id="raio" autocomplete="off">
+        <input type="number" name="base" id="base" autocomplete="off"><br>
         <input type="submit" value="Calcular">
-        <p><?php echo $areac; ?></p>
+        <p><?php echo $areat; ?></p>
     </form>
     <br>
     <a href="index.html">Voltar</a>
