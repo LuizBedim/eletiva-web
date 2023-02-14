@@ -5,7 +5,7 @@ if (!isset($_GET["num"])) {
 } else {
     $num = $_GET["num"];
 }
-
+    
 $result = 0;
 
 for ($i = 0; $i <= $num; $i++) {
