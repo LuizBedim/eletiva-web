@@ -1,3 +1,19 @@
+
+<?php
+if (!isset($_GET["num"])) {
+    $num = 0;
+} else {
+    $num = $_GET["num"];
+}
+
+$result = 0;
+
+for ($i = 0; $i <= $num; $i++) {
+    $result = $result + $i;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +23,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+<form method="GET" action="">
+        <p>Informe o número desejado:</p>
+        <input type="number" name="num" id="num" autocomplete="off">
+        <input type="submit" value="Somar">
+        <p><?php echo $result; ?></p>
+    </form>
 </body>
 </html>
