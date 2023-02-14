@@ -23,7 +23,7 @@ for ($i = 0; $i <= $num; $i++) {
     <title>Document</title>
 </head>
 <body>
-<form method="GET" action="">
+    <form method="GET" action="">
         <p>Informe o número desejado:</p>
         <input type="number" name="num" id="num" autocomplete="off">
         <input type="submit" value="Somar">
