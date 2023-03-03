@@ -1,15 +1,16 @@
 
 <?php
+session_start();
+$soma = 0;
+
 if (!isset($_GET["num"])) {
-    $num = 0;
+    $num = 1;
 } else {
     $num = $_GET["num"];
 }
-    
-$result = 0;
 
-for ($i = 0; $i <= $num; $i++) {
-    $result = $result + $i;
+for ($i = 0; $i < strlen($num); $i++){
+    $soma += $num[$i];
 }
 
 ?>
@@ -27,7 +28,7 @@ for ($i = 0; $i <= $num; $i++) {
         <p>Informe o número desejado:</p>
         <input type="number" name="num" id="num" autocomplete="off">
         <input type="submit" value="Somar">
-        <p><?php echo $result; ?></p>
+        <p><?php echo $soma; ?></p>
     </form>
 </body>
 </html>
